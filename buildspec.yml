@@ -15,12 +15,12 @@ phases:
       - pytest
       - npm uninstall -g less
       - npm install -g less
+      - npx lessc styles.less static/css/styles.css
   build:
     commands:
       - echo Build the CSS using less.
       - npm install -g less
       - mkdir -p static/css
-      - npx lessc styles.less static/css/styles.css
 
 artifacts:
   files:
