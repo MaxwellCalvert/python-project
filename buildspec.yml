@@ -9,6 +9,8 @@ phases:
     commands:
       - echo Test the python application.
       - export PYTHONPATH=$PYTHONPATH:$(pwd)
+      - npm install -g less
+      - lessc styles.less static/css/styles.css
       - pip install "Werkzeug<3.0"
       - pip install -r requirements.txt
       - pip install -U pytest
