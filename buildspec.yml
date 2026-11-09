@@ -20,7 +20,7 @@ phases:
       - echo Build the CSS using less.
       - npm install -g less
       - mkdir -p static/css
-      - lessc styles.less static/css/styles.css
+      - npx lessc styles.less static/css/styles.css
 
 artifacts:
   files:
