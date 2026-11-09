@@ -9,6 +9,7 @@ phases:
     commands:
       - echo Test the python application.
       - export PYTHONPATH=$PYTHONPATH:$(pwd)
+      - pip install "Werkzeug<3.0"
       - pip install -r requirements.txt
       - pip install -U pytest
       - pytest
