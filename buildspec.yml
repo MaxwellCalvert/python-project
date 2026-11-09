@@ -13,6 +13,8 @@ phases:
       - pip install -r requirements.txt
       - pip install -U pytest
       - pytest
+      - npm uninstall -g less
+      - npm install -g less
   build:
     commands:
       - echo Build the CSS using less.
