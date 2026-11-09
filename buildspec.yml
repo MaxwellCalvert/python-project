@@ -13,14 +13,12 @@ phases:
       - pip install -r requirements.txt
       - pip install -U pytest
       - pytest
-      - npm uninstall -g less
-      - npm install -g less
-      - npx lessc styles.less static/css/styles.css
   build:
     commands:
       - echo Build the CSS using less.
-      - npm install -g less
       - mkdir -p static/css
+      - npm install less
+      - node compile-less.js
 
 artifacts:
   files:
