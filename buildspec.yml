@@ -8,7 +8,6 @@ phases:
   pre_build:
     commands:
       - echo Test the python application.
-      - pip install -e .
       - pip install -r requirements.txt
       - pip install -U pytest
       - pytest
